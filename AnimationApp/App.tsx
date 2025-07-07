@@ -7,6 +7,7 @@ import Interpolation from "./tutorials/AnimatedAPI/Interpolation";
 import AnimationTypes from "./tutorials/AnimatedAPI/AnimationTypes";
 import EasingAnimation from "./tutorials/AnimatedAPI/EasingAnimation";
 import NestedFunction from "./tutorials/AnimatedAPI/NestedFunction";
+import EventAnimation from "./tutorials/AnimatedAPI/EventAnimation";
 
 export default function App() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
       {/* <Interpolation /> */}
       {/* <AnimationTypes /> */}
       {/* <EasingAnimation /> */}
-      <NestedFunction />
+      {/* <NestedFunction /> */}
+      <EventAnimation />
     </View>
   );
 }
