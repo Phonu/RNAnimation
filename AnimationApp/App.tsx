@@ -5,6 +5,7 @@ import Basics from "./tutorials/AnimatedAPI/Basics";
 import ValueXY from "./tutorials/AnimatedAPI/ValueXY";
 import Interpolation from "./tutorials/AnimatedAPI/Interpolation";
 import AnimationTypes from "./tutorials/AnimatedAPI/AnimationTypes";
+import EasingAnimation from "./tutorials/AnimatedAPI/EasingAnimation";
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
       {/* <Basics /> */}
       {/* <ValueXY /> */}
       {/* <Interpolation /> */}
-      <AnimationTypes />
+      {/* <AnimationTypes /> */}
+      <EasingAnimation />
     </View>
   );
 }
