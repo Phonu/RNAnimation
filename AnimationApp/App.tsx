@@ -4,6 +4,7 @@ import NoLibrary from "./tutorials/AnimatedAPI/NoLibrary";
 import Basics from "./tutorials/AnimatedAPI/Basics";
 import ValueXY from "./tutorials/AnimatedAPI/ValueXY";
 import Interpolation from "./tutorials/AnimatedAPI/Interpolation";
+import AnimationTypes from "./tutorials/AnimatedAPI/AnimationTypes";
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       {/* <NoLibrary /> */}
       {/* <Basics /> */}
       {/* <ValueXY /> */}
-      <Interpolation />
+      {/* <Interpolation /> */}
+      <AnimationTypes />
     </View>
   );
 }
