@@ -51,6 +51,8 @@ const Interpolation = () => {
 
   const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
   const differtialClampY = useRef(Animated.diffClamp(pan.y, -100, 100)).current;
+  const differtialClampX = useRef(Animated.diffClamp(pan.x, -100, 100)).current;
+
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     // when using events and differnial axis make useNativeDriver as false
@@ -93,7 +95,15 @@ const Interpolation = () => {
       {/* use differnial clamp */}
       <Animated.View
         {...panResponder.panHandlers}
-        style={[styles.box2, { transform: [{ translateY: differtialClampY }] }]}
+        style={[
+          styles.box2,
+          {
+            transform: [
+              { translateY: differtialClampY },
+              { translateX: differtialClampX },
+            ],
+          },
+        ]}
       />
     </View>
   );
