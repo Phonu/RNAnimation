@@ -4,6 +4,7 @@ import {
   Animated,
   useAnimatedValue,
   Easing,
+  PanResponder,
 } from "react-native";
 import React, { useEffect, useRef } from "react";
 
@@ -39,7 +40,6 @@ custom easying:  https://cubic-bezier.com/
 
 const Interpolation = () => {
   const animatedValue = useAnimatedValue(0);
-  const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
   const startInterpolation = () => {
     Animated.timing(animatedValue, {
       toValue: 4,
@@ -48,6 +48,22 @@ const Interpolation = () => {
       useNativeDriver: true,
     }).start();
   };
+
+  const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
+  const differtialClampY = useRef(Animated.diffClamp(pan.y, -100, 100)).current;
+  const panResponder = PanResponder.create({
+    onStartShouldSetPanResponder: () => true,
+    // when using events and differnial axis make useNativeDriver as false
+    onPanResponderMove: Animated.event([null, { dx: pan.x, dy: pan.y }], {
+      useNativeDriver: false,
+    }),
+    onPanResponderRelease: () => {
+      Animated.spring(pan, {
+        toValue: { x: 0, y: 0 },
+        useNativeDriver: true,
+      }).start();
+    },
+  });
 
   useEffect(() => {
     startInterpolation();
@@ -73,6 +89,12 @@ const Interpolation = () => {
           },
         ]}
       />
+
+      {/* use differnial clamp */}
+      <Animated.View
+        {...panResponder.panHandlers}
+        style={[styles.box2, { transform: [{ translateY: differtialClampY }] }]}
+      />
     </View>
   );
 };
@@ -88,6 +110,12 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 120,
     backgroundColor: "green",
+  },
+  box2: {
+    width: 100,
+    height: 100,
+    borderRadius: 120,
+    backgroundColor: "blue",
   },
 });
 
