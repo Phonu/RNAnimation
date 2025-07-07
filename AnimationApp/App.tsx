@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import NoLibrary from "./tutorials/AnimatedAPI/NoLibrary";
 import Basics from "./tutorials/AnimatedAPI/Basics";
 import ValueXY from "./tutorials/AnimatedAPI/ValueXY";
+import Interpolation from "./tutorials/AnimatedAPI/Interpolation";
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
       {/* ANIMATED API */}
       {/* <NoLibrary /> */}
       {/* <Basics /> */}
-      <ValueXY />
+      {/* <ValueXY /> */}
+      <Interpolation />
     </View>
   );
 }
