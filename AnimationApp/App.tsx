@@ -6,6 +6,7 @@ import ValueXY from "./tutorials/AnimatedAPI/ValueXY";
 import Interpolation from "./tutorials/AnimatedAPI/Interpolation";
 import AnimationTypes from "./tutorials/AnimatedAPI/AnimationTypes";
 import EasingAnimation from "./tutorials/AnimatedAPI/EasingAnimation";
+import NestedFunction from "./tutorials/AnimatedAPI/NestedFunction";
 
 export default function App() {
   return (
@@ -20,7 +21,8 @@ export default function App() {
       {/* <ValueXY /> */}
       {/* <Interpolation /> */}
       {/* <AnimationTypes /> */}
-      <EasingAnimation />
+      {/* <EasingAnimation /> */}
+      <NestedFunction />
     </View>
   );
 }
