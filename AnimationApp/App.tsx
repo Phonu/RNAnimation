@@ -11,15 +11,18 @@ import EventAnimation from "./tutorials/AnimatedAPI/EventAnimation";
 import CustomAnimatedComponent from "./tutorials/AnimatedAPI/CustomAnimatedComponent";
 import LayoutAnim from "./tutorials/AnimatedAPI/LayoutAnim";
 import ScrollEvent from "./tutorials/AnimatedAPI/ScrollEvent";
+import RNTemplate from "./tutorials/Reanimated/RNTemplate";
+import RNBasics from "./tutorials/Reanimated/RNBasics";
 
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginTop: 50 }}>
       <SafeAreaView />
       <View style={styles.headerContainer}>
         <Text style={styles.header}>Animations</Text>
       </View>
       {/* ANIMATED API */}
+      {/* ------------- */}
       {/* <NoLibrary /> */}
       {/* <Basics /> */}
       {/* <ValueXY /> */}
@@ -30,7 +33,13 @@ export default function App() {
       {/* <EventAnimation /> */}
       {/* <CustomAnimatedComponent /> */}
       {/* <LayoutAnim /> */}
-      <ScrollEvent />
+      {/* <ScrollEvent /> */}
+      {/* ------------- */}
+
+      {/* Reanimated API */}
+      {/* -------------- */}
+      {/* <RNTemplate /> */}
+      <RNBasics />
     </View>
   );
 }
