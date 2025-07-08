@@ -10,6 +10,7 @@ import NestedFunction from "./tutorials/AnimatedAPI/NestedFunction";
 import EventAnimation from "./tutorials/AnimatedAPI/EventAnimation";
 import CustomAnimatedComponent from "./tutorials/AnimatedAPI/CustomAnimatedComponent";
 import LayoutAnim from "./tutorials/AnimatedAPI/LayoutAnim";
+import ScrollEvent from "./tutorials/AnimatedAPI/ScrollEvent";
 
 export default function App() {
   return (
@@ -28,7 +29,8 @@ export default function App() {
       {/* <NestedFunction /> */}
       {/* <EventAnimation /> */}
       {/* <CustomAnimatedComponent /> */}
-      <LayoutAnim />
+      {/* <LayoutAnim /> */}
+      <ScrollEvent />
     </View>
   );
 }
