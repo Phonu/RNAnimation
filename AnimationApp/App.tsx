@@ -9,6 +9,7 @@ import EasingAnimation from "./tutorials/AnimatedAPI/EasingAnimation";
 import NestedFunction from "./tutorials/AnimatedAPI/NestedFunction";
 import EventAnimation from "./tutorials/AnimatedAPI/EventAnimation";
 import CustomAnimatedComponent from "./tutorials/AnimatedAPI/CustomAnimatedComponent";
+import LayoutAnim from "./tutorials/AnimatedAPI/LayoutAnim";
 
 export default function App() {
   return (
@@ -26,7 +27,8 @@ export default function App() {
       {/* <EasingAnimation /> */}
       {/* <NestedFunction /> */}
       {/* <EventAnimation /> */}
-      <CustomAnimatedComponent />
+      {/* <CustomAnimatedComponent /> */}
+      <LayoutAnim />
     </View>
   );
 }
