@@ -13,6 +13,8 @@ import LayoutAnim from "./tutorials/AnimatedAPI/LayoutAnim";
 import ScrollEvent from "./tutorials/AnimatedAPI/ScrollEvent";
 import RNTemplate from "./tutorials/Reanimated/RNTemplate";
 import RNBasics from "./tutorials/Reanimated/RNBasics";
+import SampleApp from "./tutorials/Reanimated/SampleApp";
+import Method from "./tutorials/Reanimated/Method";
 
 export default function App() {
   return (
@@ -39,7 +41,9 @@ export default function App() {
       {/* Reanimated API */}
       {/* -------------- */}
       {/* <RNTemplate /> */}
-      <RNBasics />
+      {/* <RNBasics /> */}
+      {/* <SampleApp /> */}
+      <Method />
     </View>
   );
 }

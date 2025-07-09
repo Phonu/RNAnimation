@@ -22,3 +22,13 @@ Native driver 2.0 & shared elements transitions:
 supports advanced transitions
 
 More Control and flexibility.
+
+#####
+
+If you're using Reanimated with react-native-gesture-handler, or navigation animations, install the dev client:
+
+npx expo install expo-dev-client
+npx expo run:ios
+
+Double-check babel.config.js has 'react-native-reanimated/plugin' at the end
+Try cleaning cache: npx expo start -c
